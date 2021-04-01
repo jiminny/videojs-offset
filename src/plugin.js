@@ -32,7 +32,7 @@ const onPlayerTimeUpdate = function() {
     });
 
     if (!this._restartBeginning) {
-      this.currentTime(this._offsetEnd - this._offsetStart);
+      // this.currentTime(this._offsetEnd - this._offsetStart);
     } else {
       this.trigger('loadstart');
       this.currentTime(0);
