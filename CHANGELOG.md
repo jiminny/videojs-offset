@@ -1,3 +1,6 @@
+<a name="2.1.5"></a>
+## [2.1.5](https://github.com/vaam-io/videojs-offset/compare/v2.1.3...v2.1.5) (2021-05-05)
+
 <a name="2.1.3"></a>
 ## [2.1.3](https://github.com/cladera/videojs-offset/compare/v2.1.2...v2.1.3) (2021-03-16)
 
