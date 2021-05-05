@@ -24,7 +24,6 @@ const onPlayerTimeUpdate = function() {
   if (this._offsetEnd > 0 && curr > (this._offsetEnd - this._offsetStart)) {
     this.off('timeupdate', onPlayerTimeUpdate);
     this.pause();
-    this.trigger('ended');
 
     // Re-bind to timeupdate next time the video plays
     this.one('play', () => {
@@ -32,8 +31,17 @@ const onPlayerTimeUpdate = function() {
     });
 
     if (!this._restartBeginning) {
-      // this.currentTime(this._offsetEnd - this._offsetStart);
+      this.one('seeking', () => {
+        this.trigger('ended');
+      });
+
+      this.currentTime(this._offsetEnd - this._offsetStart);
+
+      this.one('play', () => {
+        this.currentTime(0);
+      });
     } else {
+      this.trigger('ended');
       this.trigger('loadstart');
       this.currentTime(0);
     }
