@@ -1,6 +1,6 @@
 {
-  "name": "@vaam-io/videojs-offset",
-  "version": "2.1.5",
+  "name": "@jiminny/videojs-offset",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/videojs-offset.cjs.js",
   "jsnext:main": "src/js/index.js",
@@ -36,7 +36,7 @@
     "version": "is-prerelease || npm run update-changelog && git add CHANGELOG.md",
     "watch": "npm-run-all -p watch:*",
     "watch:js": "npm run build:js -- -w",
-    "prepublishOnly": "npm-run-all build test:verify"
+    "x_prepublishOnly": "npm-run-all build test:verify"
   },
   "keywords": [
     "videojs",
@@ -55,7 +55,7 @@
   ],
   "dependencies": {
     "global": "^4.3.2",
-    "video.js": "^6 || ^7"
+    "video.js": "^8.3.0"
   },
   "devDependencies": {
     "@videojs/generator-helpers": "~1.0.0",
